@@ -34,3 +34,11 @@ scenarios:
   - name: all_healthy
     description: "Baseline — both providers healthy"
     provider_overrides: {}
+  - name: cache_stale_candidate
+    description: "Low similarity threshold — year/ID guardrails must block false hits"
+    provider_overrides: {}
+    cache_similarity_threshold: 0.35
+  - name: no_cache_baseline
+    description: "Same traffic with cache disabled for cost/latency comparison"
+    provider_overrides: {}
+    cache_enabled: false

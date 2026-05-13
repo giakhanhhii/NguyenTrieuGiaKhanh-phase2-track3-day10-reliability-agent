@@ -36,6 +36,8 @@ class ScenarioConfig(BaseModel):
     name: str
     description: str = ""
     provider_overrides: dict[str, float] = Field(default_factory=dict)
+    cache_similarity_threshold: float | None = None
+    cache_enabled: bool | None = None
 
 
 class LabConfig(BaseModel):
